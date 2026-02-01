@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Voyage | Curating the Uncharted",
-  description: "Experience the world's most breathtaking destinations with itineraries crafted for the modern explorer.",
+  title: "Rufin Travel and Tours | Where Memories Begin",
+  description: "Your trusted Philippine-based travel agency specializing in family and group travel. Stress-free planning for unforgettable Korea, Jeju Island, and international tours.",
 };
 
 export default function RootLayout({

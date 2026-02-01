@@ -1,74 +1,130 @@
 import Image from "next/image";
 
-const articles = [
+const testimonials = [
   {
     id: 1,
-    title: "A Weekend in Copenhagen",
-    excerpt: "Exploring how the world leader in design and sustainable living is Denmark's capital.",
-    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=600&h=400&fit=crop",
-    date: "Jan 15, 2025",
-    category: "Culture",
+    name: "Maria Santos",
+    location: "Quezon City",
+    trip: "Seoul + Jeju Family Trip",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
+    rating: 5,
+    quote: "Rufin Travel made our first Korea trip so easy! They handled everything from visa assistance to hotel bookings. Our kids loved Lotte World and we didn't have to worry about a single thing!",
   },
   {
     id: 2,
-    title: "The Colors of Marrakech",
-    excerpt: "Navigating the vibrant souks and hidden riads of Morocco's most exotic city.",
-    image: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&h=400&fit=crop",
-    date: "Jan 10, 2025",
-    category: "Culture",
+    name: "The Reyes Family",
+    location: "Makati City",
+    trip: "Jeju Island Getaway",
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=100&h=100&fit=crop",
+    rating: 5,
+    quote: "Best barkada trip ever! We were a group of 12 and Rufin coordinated everything perfectly. The cherry blossom timing was spot on. Already planning our next trip with them!",
   },
   {
     id: 3,
-    title: "Packing for Patagonia",
-    essential: "Everything you need for trekking through South America's wilderness.",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop",
-    date: "Jan 5, 2025",
-    category: "Guide",
+    name: "Carlo & Jenny",
+    location: "Cebu City",
+    trip: "Seoul Honeymoon",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    rating: 5,
+    quote: "We chose Rufin for our honeymoon and they didn't disappoint. They arranged a special dinner for us and the hotel had flower petals! Very thoughtful team.",
   },
 ];
 
 export default function Journal() {
   return (
-    <section id="journal" className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24 section-light">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <span className="text-xs text-[#3b9eff] uppercase tracking-wider font-medium">
-            The Journal
+          <span className="text-xs text-[#E07B54] uppercase tracking-wider font-semibold">
+            Happy Travelers
           </span>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl lg:text-4xl font-medium mt-2">
-            Stories from the Field
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl lg:text-4xl font-medium mt-2 text-[#2D2D2D]">
+            What Our Clients Say
           </h2>
+          <p className="text-[#6B7280] mt-3 max-w-lg mx-auto">
+            Don&apos;t just take our word for it. Here&apos;s what Filipino families are saying about their experience with Rufin Travel and Tours.
+          </p>
         </div>
 
-        {/* Articles Grid */}
+        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article) => (
-            <article
-              key={article.id}
-              className="group cursor-pointer"
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="testimonial-card"
             >
-              <div className="relative rounded-2xl overflow-hidden mb-4 aspect-[4/3]">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+              {/* Rating Stars */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#E07B54" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                ))}
               </div>
-              <div className="flex items-center gap-3 text-xs text-[#8b8b99] mb-2">
-                <span>{article.date}</span>
-                <span className="w-1 h-1 rounded-full bg-[#8b8b99]" />
-                <span>{article.category}</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-[#3b9eff] transition-colors">
-                {article.title}
-              </h3>
-              <p className="text-[#8b8b99] text-sm leading-relaxed">
-                {article.excerpt || article.essential}
+
+              {/* Quote */}
+              <p className="text-[#2D2D2D] leading-relaxed mb-6">
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
-            </article>
+
+              {/* Author Info */}
+              <div className="flex items-center gap-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-[#2D2D2D]">{testimonial.name}</p>
+                  <p className="text-sm text-[#6B7280]">{testimonial.trip}</p>
+                  <p className="text-xs text-[#E07B54]">{testimonial.location}</p>
+                </div>
+              </div>
+            </div>
           ))}
+        </div>
+
+        {/* Social Proof Bar */}
+        <div className="mt-12 bg-white rounded-2xl p-6 lg:p-8 shadow-sm">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {testimonials.map((t, i) => (
+                  <div key={i} className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white">
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+                <div className="w-10 h-10 rounded-full bg-[#E07B54] border-2 border-white flex items-center justify-center text-white text-xs font-semibold">
+                  +497
+                </div>
+              </div>
+              <div>
+                <p className="font-semibold text-[#2D2D2D]">Join 500+ happy Filipino families</p>
+                <p className="text-sm text-[#6B7280]">who&apos;ve traveled with Rufin</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 text-center">
+              <div>
+                <p className="text-2xl font-bold text-[#E07B54]">4.9</p>
+                <p className="text-xs text-[#6B7280]">Average Rating</p>
+              </div>
+              <div className="w-px h-10 bg-gray-200" />
+              <div>
+                <p className="text-2xl font-bold text-[#1A5D5D]">100%</p>
+                <p className="text-xs text-[#6B7280]">Would Recommend</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

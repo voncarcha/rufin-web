@@ -1,66 +1,82 @@
 const features = [
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M2 12H22" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22C9.5 19.5 8 16 8 12C8 8 9.5 4.5 12 2Z" stroke="currentColor" strokeWidth="1.5"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "Global Access",
-    description: "Exclusive entry to over 5,000 private properties and experiences worldwide, vetted personally by our team.",
-    color: "from-blue-500/20 to-cyan-500/20",
+    title: "Stress-Free Planning",
+    description: "Leave the hassle to us! From flights to hotels to tours, we handle every detail so you can simply show up and enjoy your vacation.",
+    color: "from-[#E07B54]/20 to-[#C96A45]/20",
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="12" cy="16" r="1" fill="currentColor"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M23 21V19C22.9986 17.1771 21.765 15.5857 20 15.13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M16 3.13C17.7699 3.58317 19.0078 5.17799 19.0078 7.005C19.0078 8.83201 17.7699 10.4268 16 10.88" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
-    title: "Secure Booking",
-    description: "State-of-the-art encryption and payment security. Your data and travel details are protected at all times.",
-    color: "from-green-500/20 to-emerald-500/20",
+    title: "Family & Group Experts",
+    description: "We specialize in family vacations and barkada trips. Whether it's 4 or 40 travelers, we'll create the perfect itinerary for your group.",
+    color: "from-[#1A5D5D]/20 to-[#14504F]/20",
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "Tailored Experiences",
-    description: "Every trip is a masterpiece. Whether you prefer cultural tours or adventure sports, we build the trip around you.",
-    color: "from-rose-500/20 to-pink-500/20",
+    title: "Trusted & Licensed",
+    description: "We're a DOT-accredited travel agency based in Makati City. Your payments and bookings are secure with us.",
+    color: "from-[#E07B54]/20 to-[#1A5D5D]/20",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M14 2V8H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 18V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M9 15L12 12L15 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: "Personalized Itineraries",
+    description: "Every trip is customized to your preferences. Want more shopping time? Kid-friendly activities? Just tell us and we'll make it happen!",
+    color: "from-[#1A5D5D]/20 to-[#E07B54]/20",
   },
 ];
 
 export default function VoyageStandard() {
   return (
-    <section id="membership" className="py-16 lg:py-24">
+    <section id="why-us" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl lg:text-4xl font-medium mb-4">
-            The Voyage Standard
+          <span className="text-xs text-[#E07B54] uppercase tracking-wider font-semibold">
+            Why Choose Us
+          </span>
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl lg:text-4xl font-medium mt-2 mb-4 text-[#2D2D2D]">
+            Travel Made Simple
           </h2>
-          <p className="text-[#8b8b99]">
-            Redefining luxury travel through technology and human connection.
+          <p className="text-[#6B7280]">
+            At Rufin Travel and Tours, we believe travel should be exciting, not stressful. Here&apos;s why Filipino families trust us with their dream vacations.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card glass-card rounded-3xl p-8 text-center hover:border-white/20 transition-all duration-300"
+              className="feature-card glass-card rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300"
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-6 feature-icon`}>
-                <span className="text-white">{feature.icon}</span>
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-5 feature-icon`}>
+                <span className="text-[#2D2D2D]">{feature.icon}</span>
               </div>
-              <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-              <p className="text-[#8b8b99] text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold mb-3 text-[#2D2D2D]">{feature.title}</h3>
+              <p className="text-[#6B7280] text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>
